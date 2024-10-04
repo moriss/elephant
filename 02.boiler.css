@@ -1,0 +1,16 @@
+/**backword compatibility for flexbox containers.**/
+.container
+{/**Only use this at targeted divs that are using flexbox**/
+display: -webkit-box;
+display: -ms-flexbox;
+display:flex;
+}
+
+/**This ensures that all elements (and their ::before and ::after pseudo-elements) use border-box**/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;/**Both eliminates default browser spacing**/
+    padding:0;
+}
+font-family: proxima-nova, "Helvetica", Arial, sans-serif;
+
